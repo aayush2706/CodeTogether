@@ -56,6 +56,7 @@ function getUserBySocketId(socketId: SocketId): User | null {
 }
 
 io.on("connection", (socket) => {
+	
 	// Handle user actions
 	socket.on(SocketEvent.JOIN_REQUEST, ({ roomId, username }) => {
 		// Check is username exist in the room
